@@ -27,6 +27,47 @@ body{
     display: flex;
     flex-direction: row-reverse ; 
 }
+.container{
+    font-family: 'Roboto',sans-serif;
+    width: 70%;
+    padding-top: 7em ;
+    padding-right: 5em;
+    padding-left:3em ;
+}
+.container>p{
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+.container>p:last-of-type{
+    margin-bottom: 1em;
+}
+.container>:nth-child(2){
+    margin-top: 1em;
+    margin-bottom: 3em;
+}
+
+.div{
+    display: flex;
+    gap: 10rem;
+    padding-bottom: 2em;
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+}
+label{
+    color: #111;
+}
+form>div:last-of-type{
+    border-bottom: 2px solid #ccc; 
+    box-shadow: 0 8px 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+button{
+    margin-top:2em ;
+}
+
 .sidebar{
     width: 30%;
     background-image: url(./images/halie-west-25xggax4bSA-unsplash.jpg);
