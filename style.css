@@ -54,6 +54,7 @@ body{
     display: flex;
     gap: 6rem;
     padding-bottom: 2em;
+    position: relative;
 }
 
 .input{
@@ -78,17 +79,44 @@ input:focus{
     outline: none;
     border-color:#000;
     background: #ffa600e1;
+} 
+
+label[for="password"]::before,
+label[for="confirm-password"]::before{ 
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.input:focus-within label[for="password"]::before,
+.input:focus-within label[for="confirm-password"]::before{
+    content: "• a minimum of 8 characters \A • a maximum of 32 characters \A • at least 1 Uppercase letter \A • at least 1 Lowercase letter \A • at least 1 Number \A • at least 1 Special character";
+    white-space: pre;
+    width: 250px;
+    height: 170px;
+    bottom: 80%;
+    padding:0.8em 0.5em;
+    position: absolute; 
+    color:#fff;
+    background:green;
+    border-radius: 10px;
+    opacity: 0.8;
+    opacity: 1;
+    transform: scale(1);
 }
 input:user-invalid{ 
     border-color:#f00; 
+}
+input:active{ 
+    border-color:#dfaf13; 
 }
 input:user-valid{ 
     border-color:green; 
 }
 
 form>div:last-of-type{
-    border-bottom: 2px solid #ccc; 
-    box-shadow: 0 8px 10px -5px rgba(0, 0, 0, 0.3);
+    border-bottom: 2px solid #999; 
+    box-shadow: 0 20px 10px -5px rgba(0, 0, 0, 0.3);
 }
 
 button{
