@@ -15,10 +15,12 @@
 }
 
 input,
-button{
+button,
+label{
   font-family: inherit;  
   font-size: inherit; 
   line-height: inherit; 
+  color: inherit;
 }
 
 body{ 
@@ -30,7 +32,7 @@ body{
 .container{
     font-family: 'Roboto',sans-serif;
     background: linear-gradient(180deg,orange,gold,orange );
-    color: #333;
+    color: navy;
     width: 70%;
     padding-top: 7em ;
     padding-bottom: 7em ;
@@ -60,9 +62,7 @@ body{
     display: flex;
     flex-direction: column;
 }
-label{
-    color: #111;
-}
+
 
 input{
     width: 130%;
@@ -70,7 +70,7 @@ input{
     border: none;
     background: none;
     border-radius: 5px;
-    border: 2px solid #777;
+    border: 2px solid #555;
     padding-left: 0.5em;
 }
 
@@ -129,6 +129,22 @@ button{
     width: 200px;
     padding: 0.5em;
     border-radius: 5px;
+    cursor: pointer;
+}
+button:hover,
+button:focus{
+    background-color: #596D48;
+    border: 2px solid #fff;   
+}
+p a{
+    text-decoration: none;
+    font-weight: 700;
+    color: green;
+    font-size: 1.2rem;
+}
+p a:hover,
+p a:focus{ 
+    color: black; 
 }
 
 .sidebar{
