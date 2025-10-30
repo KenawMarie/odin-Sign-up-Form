@@ -18,9 +18,7 @@ input,
 button{
   font-family: inherit;  
   font-size: inherit; 
-  line-height: inherit;
-  background: inherit;
-  color: inherit;
+  line-height: inherit; 
 }
 
 body{ 
@@ -35,6 +33,7 @@ body{
     color: #333;
     width: 70%;
     padding-top: 7em ;
+    padding-bottom: 7em ;
     padding-right: 5em;
     padding-left:3em ;
 }
@@ -77,7 +76,8 @@ input{
 
 input:focus{
     outline: none;
-    border-color:#000;
+    border-color:blue;
+    box-shadow: 3px 3px 6px 1px blue;
     background: #ffa600e1;
 } 
 
@@ -120,7 +120,15 @@ form>div:last-of-type{
 }
 
 button{
-    margin-top:2em ;
+    background-color: #008000;
+    border: 2px solid #008000;
+    box-shadow: 3px 3px 6px 3px blue ;
+    font-size: 1.2rem;
+    color: #fff;
+    margin:2em 0 ;
+    width: 200px;
+    padding: 0.5em;
+    border-radius: 5px;
 }
 
 .sidebar{
