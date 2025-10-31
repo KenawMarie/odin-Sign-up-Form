@@ -66,7 +66,7 @@ body{
 
 input{
     width: 130%;
-    min-height: 35px;
+    min-height: 2.1875rem;
     border: none;
     background: none;
     border-radius: 5px;
@@ -92,17 +92,23 @@ label[for="confirm-password"]::before{
 .input:focus-within label[for="confirm-password"]::before{
     content: "• a minimum of 8 characters \A • a maximum of 32 characters \A • at least 1 Uppercase letter \A • at least 1 Lowercase letter \A • at least 1 Number \A • at least 1 Special character";
     white-space: pre;
-    width: 250px;
-    height: 170px;
+    width: 14.2rem;
+    height: 10.625rem;
     bottom: 80%;
     padding:0.8em 0.5em;
     position: absolute; 
     color:#fff;
     background:green;
-    border-radius: 10px;
+    border-radius: 0.625rem;
     opacity: 0.8;
     opacity: 1;
     transform: scale(1);
+}
+.input:focus-within label[for="confirm-password"]::before{
+    left: 40%;
+}
+.input:focus-within label[for="password"]::before{
+    left: 2rem;
 }
 input:user-invalid{ 
     border-color:#f00; 
@@ -126,7 +132,7 @@ button{
     font-size: 1.2rem;
     color: #fff;
     margin:2em 0 ;
-    width: 200px;
+    width: 12.5rem;
     padding: 0.5em;
     border-radius: 5px;
     cursor: pointer;
@@ -134,7 +140,8 @@ button{
 button:hover,
 button:focus{
     background-color: #596D48;
-    border: 2px solid #fff;   
+    border: 2px solid orange; 
+    color: orange;
 }
 p a{
     text-decoration: none;
@@ -169,8 +176,8 @@ svg:focus .svg{
     cursor: pointer;
 }
 svg{ 
-    min-width: 66px; 
-    min-height: 90px;
+    min-width: 4.125rem; 
+    min-height: 5.625rem;
 }
 
 .logo .text-logo{
@@ -194,17 +201,41 @@ svg{
     color: #d44511;
     cursor: pointer;
 } 
-@media (max-width:768px) {
+@media (max-width:48rem) {
     .div{
         flex-direction: column;
         gap: 2em;
         width: 80%;
     }
-    /* .input:focus-within label[for="password"]::before,
+    .input:focus-within label[for="password"]::before{
+        bottom: 100%;
+        opacity: 0.8;
+        left: 1.5rem;
+        width: 14rem;
+    }
     .input:focus-within label[for="confirm-password"]::before{
-        bottom: 100%; 
-    } */
+        bottom: 46%;
+        opacity: 0.8; 
+        left: 1.5rem;
+        width: 14rem;
+    }
     .sidebar .logo{
         flex-direction: column;
+    }
+}
+@media (max-width:25.75rem) {
+    .sidebar{
+        display: none;
+    }
+    .container{
+        width: 100%;
+    }
+    .input:focus-within label[for="password"]::before{ 
+        left: 1.7rem;
+        width: 14rem;
+    }
+    .input:focus-within label[for="confirm-password"]::before{ 
+        left: 1.7rem;
+        width: 14rem;
     }
 }
